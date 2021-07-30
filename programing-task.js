@@ -27,15 +27,16 @@ calc.multiply()
 function seriesGenerate(num) {
  if (num === 1) return num;
  let results = [];
- for (let i = 1; i <= num + 2; i++) {
+ if (num % 2 == 0) num -= 1;
+ for (let i = 1; i <= num * 2; i++) {
   if (i % 2 !== 0) {
    results.push(i)
   }
  }
+
  return results;
 }
 seriesGenerate(5)
-
 // example 3
 function helperPatternIncOrder(input, results) {
  for (let no = 1; no <= input; no++) {
